@@ -164,7 +164,7 @@ $(document).ready(function(){
 	
 	
 	function datashow(){
-		
+		console.log('From datashow');
 		$.ajax({
 			type:"POST",
 			url:base_url+"Controller/showData",
@@ -175,7 +175,7 @@ $(document).ready(function(){
 			async:false,
 			success: function(data){
 				var data=eval(data);
-				console.log(data);
+				console.log('datashow response: '+data);
 				$('#tablebody').html('');
 				var table=""; var index =1;
 				for(var i=0;i<data.length;i++)
